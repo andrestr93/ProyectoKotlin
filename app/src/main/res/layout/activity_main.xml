@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reciclercoches"
+            android:layout_width="406dp"
+            android:layout_height="623dp"
+            android:background="#B7EE75"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/butmenu"
+            android:layout_width="66dp"
+            android:layout_height="188dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:fab_addButtonColorPressed="#81F781"
+            app:fab_expandDirection="left"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reciclercoches"
+            tools:ignore="MissingConstraints">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/butagregar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="agrega"
+                app:fab_colorNormal="#ffffff"
+                app:fab_colorPressed="#F5DA81"
+                android:src="@drawable/agrega2">
+
+            </com.getbase.floatingactionbutton.FloatingActionButton>
+
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/butconsultar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="#ffffff"
+                android:onClick="consulta"
+                android:src="@drawable/cocheconsulta">
+
+            </com.getbase.floatingactionbutton.FloatingActionButton>
+
+
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
